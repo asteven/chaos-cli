@@ -1,15 +1,13 @@
 from setuptools import setup, find_packages
 
-import chaos.cli
-
 name = 'chaos-cli'
 
 setup(
     name=name,
-    version=chaos.cli.__version__,
+    version='0.1.0',
     author='Steven Armstrong',
     author_email='steven-%s@armstrong.cc' % name,
-    description=chaos.common.__doc__,
+    description='Chaos cli tools and utilities',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
