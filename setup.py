@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 name = 'chaos-cli'
 
@@ -13,9 +13,7 @@ setup(
         'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         'Operating System :: POSIX :: Linux',
     ],
-    #packages=find_packages(),
-    packages=['chaos.cli', 'chaos.cli.commands'],
-    include_package_data=True,
+    py_modules=['chaos.cli'],
     install_requires=[
         'Click',
         'click-plugins',
@@ -23,9 +21,6 @@ setup(
     entry_points={
         'console_scripts': [
             'chaos = chaos.cli:main'
-        ],
-        'chaos.cli.commands': [
-            'hello = chaos.cli.commands.hello:main',
         ],
     },
 )
