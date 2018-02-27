@@ -1,10 +1,11 @@
+import fastentrypoints
 from setuptools import setup
 
 name = 'chaos-cli'
 
 setup(
     name=name,
-    version='0.1.0',
+    version='0.1.1',
     author='Steven Armstrong',
     author_email='steven-%s@armstrong.cc' % name,
     description='Chaos cli tools and utilities',
@@ -14,7 +15,10 @@ setup(
         'Operating System :: POSIX :: Linux',
     ],
     py_modules=['chaos.cli'],
+    setup_requires=['reentry'],
+    reentry_register=True,
     install_requires=[
+        'reentry',
         'Click',
         'click-plugins',
     ],
