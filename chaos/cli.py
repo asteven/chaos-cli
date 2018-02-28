@@ -4,13 +4,13 @@ import configparser
 import collections
 import logging
 
-import pkg_resources
 
 import click
 from click_plugins import with_plugins
+from reentry.manager import iter_entry_points
 
 
-@with_plugins(pkg_resources.iter_entry_points('chaos.cli.commands'))
+@with_plugins(iter_entry_points('chaos.cli.commands'))
 @click.group()
 @click.option('--verbose', '-v', 'log_level', flag_value='info', help='set log level to info', envvar='CHAOS_LOG_LEVEL')
 @click.option('--debug', '-d', 'log_level', flag_value='debug', help='set log level to debug', envvar='CHAOS_LOG_LEVEL')
