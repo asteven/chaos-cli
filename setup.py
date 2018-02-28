@@ -5,7 +5,7 @@ name = 'chaos-cli'
 
 setup(
     name=name,
-    version='0.1.1',
+    version='0.1.2',
     author='Steven Armstrong',
     author_email='steven-%s@armstrong.cc' % name,
     description='Chaos cli tools and utilities',
