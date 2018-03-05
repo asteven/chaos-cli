@@ -15,9 +15,8 @@ setup(
     ],
     packages=find_packages(),
     include_package_data=True,
+    setup_requires=['reentry'],
     install_requires=[
-        'Click',
-        'click-plugins',
         'chaos-cli',
     ],
     entry_points={

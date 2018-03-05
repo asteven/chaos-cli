@@ -1,7 +1,3 @@
-import logging
-import sys
-import subprocess
-
 import click
 
 
@@ -17,14 +13,16 @@ def main(ctx):
 def world(ctx):
     """I'll say hello world
     """
-    print('hello world')
+    click.echo('hello world')
+
 
 @main.command()
 @click.pass_context
 def moon(ctx):
     """I'll say hello moon
     """
-    print('hello moon')
+    click.echo('hello moon')
+
 
 @main.command()
 @click.argument('name', nargs=1)
@@ -32,4 +30,4 @@ def moon(ctx):
 def name(ctx, name):
     """I'll say hello to you
     """
-    print('hello '+ name)
+    click.echo('hello '+ name)
