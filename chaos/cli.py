@@ -7,7 +7,11 @@ import logging
 
 import click
 from click_plugins import with_plugins
-import reentry.manager
+
+try:
+   from reentry import manager as entry_pt_manager
+except:
+   import pkg_resources as entry_pt_manager
 
 
 def get_config_files(ctx, file_name):
