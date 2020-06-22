@@ -27,7 +27,7 @@ def get_config_files(ctx, file_name):
     return config_files
 
 
-@with_plugins(reentry.manager.iter_entry_points('chaos.cli.commands'))
+@with_plugins(entry_pt_manager.iter_entry_points('chaos.cli.commands'))
 @click.group()
 @click.option('--verbose', '-v', 'log_level', flag_value='info', help='set log level to info', envvar='CHAOS_LOG_LEVEL')
 @click.option('--debug', '-d', 'log_level', flag_value='debug', help='set log level to debug', envvar='CHAOS_LOG_LEVEL')
